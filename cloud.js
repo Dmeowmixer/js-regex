@@ -22,9 +22,12 @@ module.exports = {
    * @return {String} The new phrase.
    */
   replaceCloud: function(phrase, newWord) {
-    var cloud = /cloud/g;
+    var cloud = /cloud\b|Cloud/g;
+
+    var cloud2 = /cloud\b|Cloud/;
+        
     return phrase.replace(cloud, newWord);
-          
+
   },
 
   /**
